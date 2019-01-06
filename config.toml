@@ -2,3 +2,11 @@ baseURL = "https://zempty0.xyz/"
 languageCode = "en-us"
 title = "Zempty0's blog"
 theme = "beautifulhugo"
+[params]
+  enableGitalk = true
+
+[params.gitalk]
+  owner = "linux0x5c"
+  repo = "linux0x5c.github.io"
+  client_id = "ffdc95bafbe5dbbcd17f"
+  client_secret = "3a260a6a1663a7bedce3763be2786efca1ee0f2a"
