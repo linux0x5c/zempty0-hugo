@@ -1,0 +1,4 @@
+baseURL = "https://zempty0.xyz/"
+languageCode = "en-us"
+title = "Zempty0's blog"
+theme "beautifulhugo"
