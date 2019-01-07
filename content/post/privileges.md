@@ -1,7 +1,12 @@
 ---
-title: "Acl"
-date: 2019-01-07T15:25:12+08:00
-draft: false
+title:       "ACL privileges"
+subtitle:    "linux acl"
+description: "acl some points"
+date:        2019-01-07
+author:      "zempty0"
+image:       ""
+tags:        ["acl", "privileges"]
+categories:  ["Linux basic" ]
 ---
 
 ##Linux之用户管理与权限控制（下）
@@ -390,6 +395,7 @@ eg: 1. user1为普通用户对于/usr/bin/passwd这个程序来说是具有x的�
 chmod g+s FILE|DIR...
 chmod g-s FILE|DIR...
 
+
 ```
 
 ![](http://i.imgur.com/sA8Zq8k.png)
@@ -404,6 +410,7 @@ chmod g-s FILE|DIR...
 
 3.如果将A目录加上SBIT的权限项目时，则甲只能针对自己创建的文件或者目录进行删除、改名、移动等操作，而无法删除他人的文件。
 
+
 ```
 
 权限设定：
@@ -412,6 +419,7 @@ chmod g-s FILE|DIR...
 ```
 chmod o+t DIR...
 chmod o-t DIR...
+
 
 ```
 
@@ -425,6 +433,7 @@ chmod o-t DIR...
 2为SGID
 
 1为SBIT
+
 
 ```
 
@@ -442,6 +451,7 @@ SGID: group,占据属组的执行权限位
 Sticky: other,占据other的执行权限位
 	t: other拥有x权限
 	T： other没有x权限
+
 
 ```
 
@@ -469,6 +479,7 @@ SUID SGID STICKY
 111 7
 ~]#chmod 4777 /tmp/a.txt
 
+
 ```
 
 **6、主机的具体权限规划：ACL的使用**
@@ -483,6 +494,7 @@ tune2fs –o acl /dev/sdb1
 mount –o acl /dev/sdb1 /mnt
 ACL生效顺序：所有者，自定义用户，自定义组，其他人
 
+
 ```
 
 **查看方法：**
@@ -492,6 +504,7 @@ ACL生效顺序：所有者，自定义用户，自定义组，其他人
 dumpe2fs 1.41.12 (17-May-2010)
 Default mount options:    user_xattr acl
 
+
 ```
 
 或者：
@@ -499,6 +512,7 @@ Default mount options:    user_xattr acl
 ```
 [root@localhost ~]# tune2fs -l /dev/sda1 | grep option
 Default mount options:    user_xattr acl
+
 
 ```
 
@@ -532,6 +546,7 @@ group::r--                      #effective:r--
 mask::r--
 other::r--
 
+
 ```
 
 注：用户rwx的ACL设置信息。最终权限由mask控制，你所设置的权限必须在mask内，否则相对mask多出来的权限也是无效的。
@@ -545,6 +560,7 @@ other::r--
 
 3.默认属性：还可以在该目录下在新建文件/目录时设置新数据的默认权限
 
+
 ```
 
 **ACL设置技巧**：getfacl、setfacl
@@ -553,6 +569,7 @@ other::r--
 1.getfacl:取得某个文件或者目录的ACL设置项目；
 
 2.setfacl：设置某个目录或者文件的ACL规定；
+
 
 ```
 
@@ -590,6 +607,7 @@ other::r--
 
 -h, --help：显示帮助信息。
 
+
 ```
 
 **getfacl命令用法**
@@ -615,6 +633,7 @@ getfacl [-aceEsRLPtpndvh] file...
 
 -h , --help：显示命令帮助信息。
 
+
 ```
 
 **设置acl实例**：
@@ -631,6 +650,7 @@ getfacl [-aceEsRLPtpndvh] file...
  setfacl -d -m u:young:rw directory ##这个目录下的所有文件和目录继承dirctory的acl权限
  getfacl file1 | setfacl --set-file=- file2 #设置file2与file1相同的acl
 
+
 ```
 
 注：acl设置成功后文件属性的权限最后一位有一个“+”号
@@ -638,6 +658,7 @@ getfacl [-aceEsRLPtpndvh] file...
 ```
 [root@localhost ~]# ll host 
 -rw-rw----+ 1 root root 59 Jan  1 20:48 host
+
 
 ```
 
@@ -664,6 +685,7 @@ drwxr-sr-x. 2 root root 4096 Aug  4 22:07 ./dir
 [root@localhost testdir]# ll  -d ./dir
 drwxrwsr-x+ 2 root root 4096 Aug  4 22:07 ./dir
 
+
 ```
 
 **补充命令：**
@@ -675,6 +697,7 @@ chattr +i 不能删除，改名，更改
 chattr +a 只能增加
 charttr -i  | charttr -a去除
 lsattr 显示特定属性
+
 
 ```
 
@@ -689,6 +712,7 @@ rm: cannot remove `host': Operation not permitted
 [root@localhost ~]# chattr -i host
 [root@localhost ~]# lsattr host 
 -------------e- host
+
 
 ```
 

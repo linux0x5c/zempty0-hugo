@@ -15,13 +15,13 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/home-bg-jeep.jpg"
-  SEOTitle = "杨林的博客 | Zempty0's Blog"
-  description = "杨林，Devops, 开源爱好者，Linux | 这里是 杨林 的博客，与你一起发现更大的世界。"
-  keyword = "杨林, yanglin, Yanglin, , 杨林的网络日志, 杨林的博客, Zempty0's Blog, 博客, 个人网站, 互联网, Microservice,Devops"
-  slogan = "路在脚下，心向远方"
+  SEOTitle = "Zempty0's Blog"
+  description = "Devops, Open Source, Linux | Here is Yang Lin's blog, and discover the bigger world with you."
+  keyword = "zempty0, yanglin, Yanglin, zemtpy0's blog, Zempty0's Blog, blog, Devops"
+  slogan = "Road at the foot, heart at the distance"
 
   image_404 = "img/404-bg.jpg"
-  title_404 = "你来到了没有知识的荒原 :("
+  title_404 = "You come to the wasteland without knowledge :("
 
   # leancloud storage for page view counter
   page_view_conter = true 
@@ -50,7 +50,6 @@ home = ["HTML", "RSS", "Algolia"]
 
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
   reward = true 
-  # reward_guide = "如果这篇文章对你有用,请随意打赏" 
 
   friends = true
   bookmarks = true
