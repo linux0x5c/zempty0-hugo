@@ -23,6 +23,10 @@ home = ["HTML", "RSS", "Algolia"]
   image_404 = "img/404-bg.jpg"
   title_404 = "You come to the wasteland without knowledge :("
 
+  # SyntaxHigh
+  # syntaxHighlighter = "highlight.js"
+  # customCSS = ["https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css"]
+
   # leancloud storage for page view counter
   page_view_conter = true 
   leancloud_app_id = "bF5Y4zC7jFqKKV9P5pPeWIpX-gzGzoHsz"
@@ -101,3 +105,4 @@ notAlternative = true
 [params.algolia]
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
 params = ["categories", "tags"] 
+
