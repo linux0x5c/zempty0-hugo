@@ -1,7 +1,9 @@
 [submodule "themes/hugo-theme-cleanwhite"]
 	path = themes/hugo-theme-cleanwhite
 	url = https://github.com/zhaohuabing/hugo-theme-cleanwhite.git
-
 [submodule "public"]
 	path = public
 	url = https://github.com/linux0x5c/linux0x5c.github.io.git
+[submodule "static/img"]
+	path = static/img
+	url = https://github.com/linux0x5c/zempty0-blog-hugo-img.git
