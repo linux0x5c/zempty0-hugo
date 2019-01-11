@@ -9,9 +9,7 @@ author:      "zempty0"
 image:       ""
 published:   true
 showtoc:     false
-tags:
-	- Bash
-	- Scripts
+tags:        ["linux"]
 categories:  ["linux basic"]
 ---
 
