@@ -1,11 +1,17 @@
 ---
+layout:      post
 title:       "I'm a bash scripts"
 subtitle:    "bash scripts"
 description: "linux shell bash scripts"
-date:        2018-01-07
-author:      "young"
+excerpt:     "I'm a bash scripts"
+date:        2018-01-11 17:14:00
+author:      "zempty0"
 image:       ""
-tags:        ["bash", "scripts"]
+published:   true
+showtoc:     false
+tags:
+	- Bash
+	- Scripts
 categories:  ["linux basic"]
 ---
 
