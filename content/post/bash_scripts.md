@@ -6,7 +6,7 @@ date:        2018-01-07
 author:      "young"
 image:       ""
 tags:        ["bash", "scripts"]
-categories:  ["linux basic" ]
+categories:  ["linux basic"]
 ---
 
 ```bash
